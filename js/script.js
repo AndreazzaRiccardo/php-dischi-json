@@ -5,7 +5,7 @@ createApp({
         return {
             apiUrl: "server.php",
             discsList: [],
-            selectImg: null
+            selectDisc: []
         }
     },
     created() {
@@ -15,10 +15,12 @@ createApp({
     },
     methods: {
         showCard(index) {
-            this.selectImg = index;
+            axios.get(this.apiUrl).then((resp) => {
+                this.selectDisc = resp.data[index];
+            })
         },
         hiddenCard() {
-            this.selectImg = null;
+            this.selectDisc = [];
         }
     }
 }).mount("#app");

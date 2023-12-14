@@ -25,14 +25,14 @@
 <body>
     <div id="app">
 
-        <div v-if="selectImg != null" class="canvas">
+        <div v-if="selectDisc != ''" class="canvas">
             <div class="container d-flex align-items-center justify-content-center">
                 <div class="card p-5">
-                    <img :src="discsList[selectImg].poster" class="card-img-top" :alt="discsList[selectImg].title">
+                    <img :src="selectDisc.poster" class="card-img-top" :alt="selectDisc.title">
                     <div class="card-body text-center">
-                        <h5 class="card-text ">{{ discsList[selectImg].title }}</h5>
-                        <p class="card-text">{{ discsList[selectImg].author }}</p>
-                        <p class="card-text fw-bold">{{ discsList[selectImg].year }}</p>
+                        <h5 class="card-text">{{ selectDisc.title }}</h5>
+                        <p class="card-text">{{ selectDisc.author }}</p>
+                        <p class="card-text fw-bold">{{ selectDisc.year }}</p>
                     </div>
                 </div>
                 <button @click="hiddenCard()" type="button" class="btn-close btn-close-white"
