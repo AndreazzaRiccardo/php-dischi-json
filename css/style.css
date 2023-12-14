@@ -13,9 +13,36 @@ header img {
 #app {
     background-color: #1D2D3C;
     height: 100vh;
+    position: relative;
 }
 
 .card {
     background-color: #112030;
     color: white;
+}
+
+.canvas {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(17, 32, 48, 0.9);
+    width: 95%;
+    height: 95%;
+    display: flex;
+    padding: 2rem;
+}
+
+.canvas .card {
+    max-width: 40%;
+    background-color: transparent;
+}
+
+.btn-close {
+    border: 1px solid black;
+    padding: .5rem;
+    align-self: flex-start;
+    position: absolute;
+    left: 95%;
 }

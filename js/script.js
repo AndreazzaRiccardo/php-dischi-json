@@ -4,7 +4,8 @@ createApp({
     data() {
         return {
             apiUrl: "server.php",
-            discsList: []
+            discsList: [],
+            selectImg : null
         }
     },
     created() {
@@ -12,5 +13,12 @@ createApp({
             this.discsList = resp.data;
         })
     },
-    methods: {}
+    methods: {
+        showCard(index) {
+            this.selectImg = index;
+        },
+        hiddenCard() {
+            this.selectImg = null;
+        }
+    }
 }).mount("#app");
