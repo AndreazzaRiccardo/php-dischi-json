@@ -2,8 +2,15 @@ const { createApp } = Vue;
 
 createApp({
     data() {
-        return {}
+        return {
+            apiUrl: "server.php",
+            discsList: []
+        }
     },
-    created() {},
+    created() {
+        axios.get(this.apiUrl).then((resp) => {
+            this.discsList = resp.data;
+        })
+    },
     methods: {}
 }).mount("#app");

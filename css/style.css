@@ -1,0 +1,21 @@
+header {
+    height: 70px;
+    background-color: #06131F;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-height: 80%;
+    margin-left: 4rem;
+}
+
+#app {
+    background-color: #1D2D3C;
+    height: 100vh;
+}
+
+.card {
+    background-color: #112030;
+    color: white;
+}
