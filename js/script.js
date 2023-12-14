@@ -5,7 +5,7 @@ createApp({
         return {
             apiUrl: "server.php",
             discsList: [],
-            selectImg : null
+            selectImg: null
         }
     },
     created() {

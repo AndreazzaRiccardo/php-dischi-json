@@ -12,7 +12,7 @@ header img {
 
 #app {
     background-color: #1D2D3C;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 
