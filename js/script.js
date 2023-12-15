@@ -15,8 +15,12 @@ createApp({
     },
     methods: {
         showCard(index) {
-            axios.get(this.apiUrl).then((resp) => {
-                this.selectDisc = resp.data[index];
+            axios.get(this.apiUrl, {
+                params: {
+                    id : index,
+                },
+            }).then((resp) => {
+                this.selectDisc = resp.data;
             })
         },
         hiddenCard() {
